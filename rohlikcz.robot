@@ -37,4 +37,4 @@ Login
     [Arguments]         ${username}                             ${password}
     Type Text           data-test=user-login-form-email         ${username}
     Type Text           data-test=user-login-form-password      ${password}
-    Click            
+    Click               data-test=btnSignIn
