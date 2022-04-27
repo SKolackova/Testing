@@ -19,6 +19,13 @@ Odhlášení
     Login               radek.tester@seznam.cz                  tajneheslotajneheslo
     Logout
 
+Přidání zboží do košíku
+    Open URL
+    Login               radek.tester@seznam.cz                  tajneheslotajneheslo
+    Pridat Do Kosiku    banán
+    Logout
+
+
 *** Keywords ***
 
 Open URL
@@ -52,3 +59,17 @@ Logout
    Click               id=headerLogin
    ${Text}=            Get Text                                data-test=btnSignIn
    Should Be Equal     ${Text}                                 Přihlásit se
+
+Pridat do kosiku
+    [Arguments]         ${Zbozi}
+
+    Type Text           \#searchGlobal          ${Zbozi}
+    Sleep               5
+    Click               "Hledat"
+    Sleep               5
+    Click               css=["data-test=btnAdd"] >> nth=1
+    Click               data-test=headerPrice
+
+    #ověří že je zboží v košíku
+    ${cart_text}=       Get Text                    id=cart
+    Log                 ${cart_text}
