@@ -33,8 +33,8 @@ Open URL
     Sleep               2
 
 Login
-    Click               id=headerLogin
     [Arguments]         ${username}                             ${password}
+    Click               id=headerLogin
     Type Text           data-test=user-login-form-email         ${username}
     Type Text           data-test=user-login-form-password      ${password}
     Click               data-test=btnSignIn
