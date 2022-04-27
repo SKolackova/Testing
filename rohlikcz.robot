@@ -67,9 +67,9 @@ Pridat do kosiku
     Sleep               5
     Click               "Hledat"
     Sleep               5
-    Click               css=["data-test=btnAdd"] >> nth=1
+    Click               css=[data-test=btnAdd] >> nth=1
     Click               data-test=headerPrice
 
-    #ověří že je zboží v košíku
-    ${cart_text}=       Get Text                    id=cart
-    Log                 ${cart_text}
+#    #ověří že je zboží v košíku
+#    ${cart_text}=       Get Text                    id=cart
+#    Log                 ${cart_text}
