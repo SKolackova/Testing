@@ -70,4 +70,5 @@ Pridat do kosiku
     Click               css=[data-test=btnAdd] >> nth=1
     Click               data-test=headerPrice
     Click               id=cart
-#    #ověří že je zboží v košíku
+    ${cart_text}=       Get Text                    #přidat cestu
+    Log To Console                ${cart_text}
