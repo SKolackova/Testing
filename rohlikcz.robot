@@ -17,6 +17,8 @@ Pozitivní přihlášení
 Negativní přihlášení
     Open URL
     Login               radek.tester@seznam.cz                  spatneheslo
+    Overeni Prihlaseni
+
 
 
 Odhlášení
@@ -66,7 +68,8 @@ Logout
    Should Be Equal     ${Text}                                 Přihlásit se
 
 Overeni prihlaseni
-
+    ${Text2}           Get Text                                data-test=notification-content
+    Should Be Equal    ${Text2}                                Zadal(a) jste nesprávný e-mail nebo heslo.
 
 Pridat do kosiku
     [Arguments]         ${Zbozi}
