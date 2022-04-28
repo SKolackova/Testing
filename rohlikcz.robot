@@ -14,6 +14,11 @@ Pozitivní přihlášení
     ${Text}=            Get Text                                data-test=my-account-button
     Should Be Equal     ${Text}                                 Můj účet
 
+Negativní přihlášení
+    Open URL
+    Login               radek.tester@seznam.cz                  spatneheslo
+
+
 Odhlášení
     Open URL
     Login               radek.tester@seznam.cz                  tajneheslotajneheslo
@@ -60,9 +65,11 @@ Logout
    ${Text}=            Get Text                                data-test=btnSignIn
    Should Be Equal     ${Text}                                 Přihlásit se
 
+Overeni prihlaseni
+
+
 Pridat do kosiku
     [Arguments]         ${Zbozi}
-
     Type Text           \#searchGlobal          ${Zbozi}
     Sleep               5
     Click               "Hledat"
