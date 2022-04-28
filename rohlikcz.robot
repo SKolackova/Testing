@@ -14,10 +14,15 @@ Pozitivní přihlášení
     ${Text}=            Get Text                                data-test=my-account-button
     Should Be Equal     ${Text}                                 Můj účet
 
-Negativní přihlášení
+Negativní přihlášení- špatné heslo
     Open URL
     Login               radek.tester@seznam.cz                  spatneheslo
-    Overeni Prihlaseni
+    Overeni Ne-prihlaseni
+
+Negativní přihlášení- heslo z velkých písmen
+    Open URL
+    Login               radek.tester@seznam.cz                  TAJNEHESLOTAJNEHESLO
+    Overeni Ne-prihlaseni
 
 
 
@@ -67,7 +72,7 @@ Logout
    ${Text}=            Get Text                                data-test=btnSignIn
    Should Be Equal     ${Text}                                 Přihlásit se
 
-Overeni prihlaseni
+Overeni ne-prihlaseni
     ${Text2}           Get Text                                data-test=notification-content
     Should Be Equal    ${Text2}                                Zadal(a) jste nesprávný e-mail nebo heslo.
 
