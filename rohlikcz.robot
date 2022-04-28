@@ -24,8 +24,6 @@ Negativní přihlášení- heslo z velkých písmen
     Login               radek.tester@seznam.cz                  TAJNEHESLOTAJNEHESLO
     Overeni Ne-prihlaseni
 
-
-
 Odhlášení
     Open URL
     Login               radek.tester@seznam.cz                  tajneheslotajneheslo
@@ -36,7 +34,6 @@ Přidání zboží do košíku
     Login               radek.tester@seznam.cz                  tajneheslotajneheslo
     Pridat Do Kosiku    banán
     Logout
-
 
 *** Keywords ***
 
