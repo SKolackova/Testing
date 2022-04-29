@@ -21,7 +21,7 @@ Open URL
 Cookie
     [Arguments]         ${type}
     IF  "${type}" == "AcceptAll"
-        Click
+        Click           # přidat id
     ELSE
         Click
     END
