@@ -19,3 +19,10 @@ Open URL
     New Page            ${URL}
 
 Cookie
+    [Arguments]         ${type}
+    IF  "${type}" == "AcceptAll"
+        Click
+    ELSE
+        Click
+    END
+    sleep               1
