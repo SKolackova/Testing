@@ -27,4 +27,4 @@ Cookie
     ELSE
         Click           # přidat lokator
     END
-    sleep               1
+    sleep               2
