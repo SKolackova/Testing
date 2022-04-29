@@ -17,6 +17,8 @@ Nakup známky
 Open URL
     New Browser         chromium                                headless=false
     New Page            ${URL}
+    Cookie              AcceptAll
+    Sleep               2
 
 Cookie
     [Arguments]         ${type}
