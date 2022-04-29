@@ -21,8 +21,8 @@ Open URL
 Cookie
     [Arguments]         ${type}
     IF  "${type}" == "AcceptAll"
-        Click           # přidat id
+        Click           # přidat lokator
     ELSE
-        Click
+        Click           # přidat lokator
     END
     sleep               1
