@@ -39,7 +39,7 @@ Přidání zboží do košíku
 Odebrání zboží z košíku
     Open URL
     Login               radek.tester@seznam.cz                  tajneheslotajneheslo
-    Pridat Do Kosiku    banán
+    Pridat Do Kosiku    mouka
     Odebrani Z Kosiku
     Take Screenshot
 
@@ -97,5 +97,5 @@ Odebrani z kosiku
     Click              data-test=headerPrice
     Click              css=.sc-14bk3kj-0 >> [data-test="btnMinus"]
     ${Text3}           Get Text                     id=cartReviewMainTitle
-    Sleep              3
-    Should Be Equal    ${Text3}                      Košík funguje i jako nákupní seznam
+    Sleep              5
+    Should Be Equal    ${Text3}                      Přehled objednávky Vysypat košík
