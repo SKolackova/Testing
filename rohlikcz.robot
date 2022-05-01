@@ -38,8 +38,10 @@ Přidání zboží do košíku
 
 Odebrání zboží z košíku
     Open URL
-
-
+    Login               radek.tester@seznam.cz                  tajneheslotajneheslo
+    Pridat Do Kosiku    banán
+    Odebrani Z Kosiku
+    Take Screenshot
 
 *** Keywords ***
 
@@ -88,5 +90,12 @@ Pridat do kosiku
     Click               css=[data-test=btnAdd] >> nth=1
     Click               data-test=headerPrice
     Click               id=cart
-    ${cart_text}=       Get Text                    xpath=//*[@id="product_1349775"]/div[1]/a
-    Log To Console                ${cart_text}
+#    ${cart_text}=       Get Text                    xpath=//*[@id="product_1349775"]/div[1]/a
+#    Log To Console                ${cart_text}
+
+Odebrani z kosiku
+    Click              data-test=headerPrice
+    Click              css=.sc-14bk3kj-0 >> [data-test="btnMinus"]
+    ${Text3}           Get Text                     id=cartReviewMainTitle
+    Sleep              3
+    Should Be Equal    ${Text3}                      Košík funguje i jako nákupní seznam
