@@ -41,7 +41,7 @@ Odebrání zboží z košíku
     Login               radek.tester@seznam.cz                  tajneheslotajneheslo
     Pridat Do Kosiku    mouka
     Odebrani Z Kosiku
-    Take Screenshot
+    Logout
 
 *** Keywords ***
 
