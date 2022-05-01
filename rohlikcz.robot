@@ -13,6 +13,7 @@ Pozitivní přihlášení
     Click               id=headerUser
     ${Text}=            Get Text                                data-test=my-account-button
     Should Be Equal     ${Text}                                 Můj účet
+    Logout
 
 Negativní přihlášení- špatné heslo
     Open URL
@@ -34,6 +35,11 @@ Přidání zboží do košíku
     Login               radek.tester@seznam.cz                  tajneheslotajneheslo
     Pridat Do Kosiku    banán
     Logout
+
+Odebrání zboží z košíku
+    Open URL
+
+
 
 *** Keywords ***
 
