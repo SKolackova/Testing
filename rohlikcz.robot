@@ -90,8 +90,6 @@ Pridat do kosiku
     Click               css=[data-test=btnAdd] >> nth=1
     Click               data-test=headerPrice
     Click               id=cart
-#    ${cart_text}=       Get Text                    xpath=//*[@id="product_1349775"]/div[1]/a
-#    Log To Console                ${cart_text}
 
 Odebrani z kosiku
     Click              data-test=headerPrice
