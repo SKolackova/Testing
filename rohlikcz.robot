@@ -94,6 +94,7 @@ Pridat do kosiku
 Odebrani z kosiku
     Click              data-test=headerPrice
     Click              css=.sc-14bk3kj-0 >> [data-test="btnMinus"]
+    Sleep              5
     ${Text3}           Get Text                     id=cartReviewMainTitle
     Sleep              5
     Should Be Equal    ${Text3}                      Přehled objednávky Vysypat košík
