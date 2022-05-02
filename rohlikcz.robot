@@ -23,12 +23,17 @@ Negativní přihlášení- špatné heslo
 Negativní přihlášení- heslo z velkých písmen
     Open URL
     Login               johnytester1@seznam.cz                  TAJNEHESLO
-    Overeni Ne-prihlaseni
+    Overeni Chybove Hlasky
 
-Negativní přihlášení- špatný formát email
+Negativní přihllášení- špatný email, správný formát
     Open URL
-    Login               spatnyformatemmail                            tajneheslo
+    Login               spatny@email.cz                         tajneheslo
+    Overeni Chybove Hlasky
 
+Negativní přihlášení- špatný email, špatný formát
+    Open URL
+    Login               spatnyformatemmail                      tajneheslo
+    Overeni Chybove Hlasky Na Email
 
 Odhlášení
     Open URL
@@ -82,9 +87,13 @@ Logout
    ${Text}=            Get Text                                data-test=btnSignIn
    Should Be Equal     ${Text}                                 Přihlásit se
 
-Overeni ne-prihlaseni
+Overeni chybove hlasky
     ${Text2}           Get Text                                data-test=notification-content
     Should Be Equal    ${Text2}                                Zadal(a) jste nesprávný e-mail nebo heslo.
+
+Overeni chybove hlasky na email
+    ${Text3}           Get Text                                data-test=user-login-form-email-message
+    Should Be Equal    ${Text3}                                Zadejte platný email
 
 Pridat do kosiku
     [Arguments]         ${Zbozi}
@@ -100,5 +109,5 @@ Odebrani z kosiku
     Click              data-test=headerPrice
     Click              css=.sc-14bk3kj-0 >> [data-test="btnMinus"]
     Sleep              2
-    ${Text3}           Get Text                     id=cartReviewMainTitle
-    Should Be Equal    ${Text3}                     Košík funguje i jako nákupní seznam
+    ${Text4}           Get Text                     id=cartReviewMainTitle
+    Should Be Equal    ${Text4}                     Košík funguje i jako nákupní seznam
