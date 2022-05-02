@@ -59,10 +59,10 @@ Open URL
     New Browser         chromium                                headless=false
     New Page            ${URL}
     Get Title           ==    Online supermarket Rohlik.cz — nejrychlejší doručení ve městě
-    Cookie              AcceptAll
+    Cookies             AcceptAll
     Sleep               2
 
-Cookie
+Cookies
     [Arguments]         ${type}
     IF  "${type}" == "AcceptAll"
         Click           id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll

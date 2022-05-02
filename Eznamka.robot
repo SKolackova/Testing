@@ -17,10 +17,10 @@ Nakup známky
 Open URL
     New Browser         chromium                                headless=false
     New Page            ${URL}
-    Cookie              AcceptAll
+    Cookies             AcceptAll
     Sleep               2
 
-Cookie
+Cookies
     [Arguments]         ${type}
     IF  "${type}" == "AcceptAll"
         Click           xpath=/html/body/footer/div[2]/div/div/div[2]/div/button[3]
