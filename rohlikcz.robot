@@ -49,7 +49,7 @@ Přidání zboží do košíku
 Odebrání zboží z košíku
     Open URL
     Login               johnytester1@seznam.cz                  tajneheslo
-    Pridat Do Kosiku    mouka
+#    Pridat Do Kosiku    mouka             - zakomentova řádek, pokud se v košíku už z předchozáho testu objevuje zboží
     Odebrani Z Kosiku
     Logout
 
