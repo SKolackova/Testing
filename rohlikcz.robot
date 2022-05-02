@@ -97,4 +97,4 @@ Odebrani z kosiku
     Sleep              5
     ${Text3}           Get Text                     id=cartReviewMainTitle
     Sleep              5
-    Should Be Equal    ${Text3}                      Přehled objednávky Vysypat košík
+    Should Be Equal    ${Text3}                     Košík funguje i jako nákupní seznam
