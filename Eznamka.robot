@@ -23,8 +23,8 @@ Open URL
 Cookie
     [Arguments]         ${type}
     IF  "${type}" == "AcceptAll"
-        Click           # přidat lokator
+        Click           xpath=/html/body/footer/div[2]/div/div/div[2]/div/button[3]
     ELSE
-        Click           # přidat lokator
+        Click           xpath=/html/body/footer/div[2]/div/div/div[2]/div/button[2]
     END
     sleep               2
