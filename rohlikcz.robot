@@ -18,7 +18,7 @@ Pozitivní přihlášení
 Negativní přihlášení- špatné heslo
     Open URL
     Login               johnytester1@seznam.cz                  spatneheslo
-    Overeni Ne-prihlaseni
+    Overeni Chybove Hlasky
 
 Negativní přihlášení- heslo z velkých písmen
     Open URL
@@ -43,7 +43,7 @@ Odhlášení
 Přidání zboží do košíku
     Open URL
     Login               johnytester1@seznam.cz                  tajneheslo
-    Pridat Do Kosiku    banán
+    Pridat Do Kosiku    mouka
     Logout
 
 Odebrání zboží z košíku
