@@ -9,7 +9,7 @@ ${URL}      https://www.rohlik.cz/vitejte#_=_
 
 Pozitivní přihlášení
     Open URL
-    Login               radek.tester@seznam.cz                  tajneheslotajneheslo
+    Login               johnytester1@seznam.cz                  tajneheslo
     Click               id=headerUser
     ${Text}=            Get Text                                data-test=my-account-button
     Should Be Equal     ${Text}                                 Můj účet
@@ -17,28 +17,33 @@ Pozitivní přihlášení
 
 Negativní přihlášení- špatné heslo
     Open URL
-    Login               radek.tester@seznam.cz                  spatneheslo
+    Login               johnytester1@seznam.cz                  spatneheslo
     Overeni Ne-prihlaseni
 
 Negativní přihlášení- heslo z velkých písmen
     Open URL
-    Login               radek.tester@seznam.cz                  TAJNEHESLOTAJNEHESLO
+    Login               johnytester1@seznam.cz                  TAJNEHESLO
     Overeni Ne-prihlaseni
+
+Negativní přihlášení- špatný formát email
+    Open URL
+    Login               spatnyformatemmail                            tajneheslo
+
 
 Odhlášení
     Open URL
-    Login               radek.tester@seznam.cz                  tajneheslotajneheslo
+    Login               johnytester1@seznam.cz                  tajneheslo
     Logout
 
 Přidání zboží do košíku
     Open URL
-    Login               radek.tester@seznam.cz                  tajneheslotajneheslo
+    Login               johnytester1@seznam.cz                  tajneheslo
     Pridat Do Kosiku    banán
     Logout
 
 Odebrání zboží z košíku
     Open URL
-    Login               radek.tester@seznam.cz                  tajneheslotajneheslo
+    Login               johnytester1@seznam.cz                  tajneheslo
     Pridat Do Kosiku    mouka
     Odebrani Z Kosiku
     Logout
