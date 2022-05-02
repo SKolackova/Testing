@@ -9,6 +9,7 @@ ${URL}      https://gymbeam.cz/
 
 Přihlášení
     Open URL
+    Login           johnytester1@seznam.cz           Tajneheslo1!
 
 # johnytester1@seznam.cz  Tajneheslo1!
 *** Keywords ***
@@ -28,4 +29,9 @@ Cookies
 
 
 Login
-
+    [Arguments]     ${username}     ${password}
+    Go To           https://gymbeam.cz/customer/account/login/
+    Type Text       id=email        ${username}
+    Type Text       id=pass         ${password}
+    Click           id=send2
+    Sleep           1
