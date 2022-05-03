@@ -24,6 +24,7 @@ Open URL
     New Page        ${URL}
     Cookies         AcceptAll
     Sleep           2
+
 Cookies
     [Arguments]     ${type}
     IF  "${type}" == "AcceptAll"
