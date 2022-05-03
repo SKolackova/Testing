@@ -27,7 +27,6 @@ Cookies
          Click           id=CybotCookiebotDialogBodyLevelButtonCustomize
     END
 
-
 Login
     [Arguments]         ${username}     ${password}
     Go To               https://gymbeam.cz/customer/account/login/
