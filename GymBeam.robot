@@ -45,4 +45,7 @@ Login
 
 Nakup
     Click              xpath=//*[@id="widget-homepage-categories"]/div/a[1]/img
-    Sleep              5
+    Sleep              1
+    Set Strict Mode     False
+    Click              css=.action[title="Přidat do košíku"] >> nth=1
+    Sleep               5
