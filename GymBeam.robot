@@ -48,4 +48,5 @@ Nakup
     Sleep              1
     Set Strict Mode     False
     Click              css=.action[title="Přidat do košíku"] >> nth=1
-    Sleep               5
+    Click              text=PŘIDAT DO KOŠÍKU
+    Sleep              2
