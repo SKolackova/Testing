@@ -1,6 +1,7 @@
 *** Settings ***
-Library         Browser
-Resource        TestData.robot
+
+Library           Browser
+Resource         TestData.robot
 
 *** Variables ***
 
@@ -11,8 +12,8 @@ Pozitivní přihlášení
     Open URL
     Login               ${USER1_NAME}                           ${USER1_PASSWORD}
     Click               id=headerUser
-    ${Text}=            Get Text                                data-test=my-account-button
-    Should Be Equal     ${Text}                                 Můj účet
+    ${Text}=            Get Text                                ${SEL_MyAccountBtn}
+    Should Be Equal     ${Text}                                 ${TEXT_MyAccount}
     Logout
 
 Negativní přihlášení- špatné heslo
