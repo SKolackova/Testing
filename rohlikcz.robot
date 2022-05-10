@@ -4,13 +4,12 @@ Resource        TestData.robot
 
 *** Variables ***
 
-${URL}      https://www.rohlik.cz/vitejte#_=_
 
 *** Test Cases ***
 
 Pozitivní přihlášení
     Open URL
-    Login               johnytester1@seznam.cz                  tajneheslo
+    Login               ${USER1_NAME}                           ${USER1_PASSWORD}
     Click               id=headerUser
     ${Text}=            Get Text                                data-test=my-account-button
     Should Be Equal     ${Text}                                 Můj účet
@@ -18,38 +17,38 @@ Pozitivní přihlášení
 
 Negativní přihlášení- špatné heslo
     Open URL
-    Login               johnytester1@seznam.cz                  spatneheslo
+    Login               ${USER1_NAME}                          spatneheslo
     Overeni Chybove Hlasky
 
 Negativní přihlášení- heslo z velkých písmen
     Open URL
-    Login               johnytester1@seznam.cz                  TAJNEHESLO
+    Login               ${USER1_NAME}                          TAJNEHESLO
     Overeni Chybove Hlasky
 
 Negativní přihllášení- špatný email, správný formát
     Open URL
-    Login               spatny@email.cz                         tajneheslo
+    Login               spatny@email.cz                         ${USER1_PASSWORD}
     Overeni Chybove Hlasky
 
 Negativní přihlášení- špatný email, špatný formát
     Open URL
-    Login               spatnyformatemmail                      tajneheslo
+    Login               spatnyformatemmail                      ${USER1_PASSWORD}
     Overeni Chybove Hlasky Na Email
 
 Odhlášení
     Open URL
-    Login               johnytester1@seznam.cz                  tajneheslo
+    Login               ${USER1_NAME}                           ${USER1_PASSWORD}
     Logout
 
 Přidání zboží do košíku
     Open URL
-    Login               johnytester1@seznam.cz                  tajneheslo
+    Login               ${USER1_NAME}                           ${USER1_PASSWORD}
     Pridat Do Kosiku    mouka
     Logout
 
 Odebrání zboží z košíku
     Open URL
-    Login               johnytester1@seznam.cz                  tajneheslo
+    Login               ${USER1_NAME}                  ${USER1_PASSWORD}
 #    Pridat Do Kosiku    mouka             - zakomentova řádek, pokud se v košíku už z předchozáho testu objevuje zboží
     Odebrani Z Kosiku
     Logout
