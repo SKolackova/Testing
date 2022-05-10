@@ -3,6 +3,9 @@
 #
 
 *** Variables ***
+
+${URL}      https://www.rohlik.cz/vitejte#_=_
+
 #uživatel
 ${USER1_NAME}               johnytester1@seznam.cz
 ${USER1_PASSWORD}           tajneheslo
