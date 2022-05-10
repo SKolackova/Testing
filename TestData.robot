@@ -41,13 +41,13 @@ ${SEL_BtnSearchGlobal}      text=Hledat
 
 ${SEL_BtnPlus}              data-test=btnPlus
 ${SEL_ProductID}            data-product-id
-${SEL_CssForAdding}         .sc-oad7xy-0
+${SEL_CssForRemove}         .sc-14bk3kj-0
 ${SEL_BtnAdd}               data-test=btnAdd
 ${SEL_BtnMinus}             data-test=btnMinus
 
 #SELEKTORY pro Košík
 ${SEL_Cart}                 id=cart
-${SEL_CartContent}          id=cartContent
+${SEL_CartContent}          data-test=headerPrice
 ${SEL_CartReview}           id=cartReviewMainTitle
 
 #SELEKTORY pro Cookie

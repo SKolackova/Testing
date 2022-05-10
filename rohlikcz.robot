@@ -97,17 +97,17 @@ Overeni chybove hlasky na email
 
 Pridat do kosiku
     [Arguments]         ${Zbozi}
-    Type Text           \#searchGlobal          ${Zbozi}
+    Type Text           ${SEL_SearchGlobal}          ${Zbozi}
     Sleep               5
     Click               "Hledat"
     Sleep               5
     Click               css=[${SEL_BtnAdd}] >> nth=1
-    Click               data-test=headerPrice
+    Click               ${SEL_CartContent}
     Click               ${SEL_Cart}
 
 Odebrani z kosiku
-    Click              data-test=headerPrice
-    Click              css=.sc-14bk3kj-0 >> [${SEL_BtnMinus}]
+    Click              ${SEL_CartContent}
+    Click              css=${SEL_CssForRemove} >> [${SEL_BtnMinus}]
     Sleep              2
-    ${Text4}           Get Text                     id=cartReviewMainTitle
+    ${Text4}           Get Text                     ${SEL_CartReview}
     Should Be Equal    ${Text4}                     ${ERROR_TEXT_EmptyCart}
