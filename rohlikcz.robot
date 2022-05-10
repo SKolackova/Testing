@@ -43,13 +43,13 @@ Odhlášení
 Přidání zboží do košíku
     Open URL
     Login               ${USER1_NAME}                           ${USER1_PASSWORD}
-    Pridat Do Kosiku    mouka
+    Pridat Do Kosiku    ${ZBOZI01_NAME}
     Logout
 
 Odebrání zboží z košíku
     Open URL
     Login               ${USER1_NAME}                  ${USER1_PASSWORD}
-#    Pridat Do Kosiku    mouka             - zakomentova řádek, pokud se v košíku už z předchozáho testu objevuje zboží
+#    Pridat Do Kosiku    ${ZBOZI01_NAME}             - zakomentova řádek, pokud se v košíku už z předchozáho testu objevuje zboží
     Odebrani Z Kosiku
     Logout
 
@@ -73,17 +73,17 @@ Cookies
 
 Login
     [Arguments]         ${username}                             ${password}
-    Click               id=headerLogin
-    Type Text           data-test=user-login-form-email         ${username}
-    Type Text           data-test=user-login-form-password      ${password}
+    Click               ${SEL_HeaderLogin}
+    Type Text           ${SEL_LoginFormEmail}         ${username}
+    Type Text           ${SEL_LoginFormPwd}      ${password}
     Click               data-test=btnSignIn
     Sleep               2
 
 Logout
    Go To               ${URl}
    Click               id=headerUser
-   Click               text=Odhlásit se
-   Click               id=headerLogin
+   Click               ${SEL_UserBoxLogoutBtn}
+   Click               ${SEL_HeaderLogin}
    ${Text}=            Get Text                                data-test=btnSignIn
    Should Be Equal     ${Text}                                 Přihlásit se
 
