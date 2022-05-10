@@ -39,7 +39,7 @@ ${SEL_MyAccountBtn}         data-test=my-account-button
 ${SEL_HeaderLogo}           id=logo
 ${SEL_SearchGlobal}         id=searchGlobal
 ${SEL_BtnSearchGlobal}      text=Hledat
-
+${SEL_HEaderUser}           id=headerUser
 #SELEKTORY pro zboží
 
 ${SEL_BtnPlus}              data-test=btnPlus
@@ -56,3 +56,7 @@ ${SEL_CartReview}           id=cartReviewMainTitle
 #SELEKTORY pro Cookie
 ${SEL_Cookie_AllowAll}      id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
 ${SEL_Cookie_Decline}       id=CybotCookiebotDialogBodyButtonDecline
+
+#SELEKTORY pro GetText
+${GET_MessEmail}            data-test=user-login-form-email-message
+${GET_NotContent}           data-test=notification-content

@@ -11,7 +11,7 @@ Resource         Configuration.robot
 Pozitivní přihlášení
     Open URL
     Login               ${USER1_NAME}                           ${USER1_PASSWORD}
-    Click               id=headerUser
+    Click               ${SEL_HEaderUser}
     ${Text}=            Get Text                                ${SEL_MyAccountBtn}
     Should Be Equal     ${Text}                                 ${TEXT_MyAccount}
     Logout
@@ -61,7 +61,7 @@ Open URL
     New Page            ${URL}
     Get Title           ==    ${TEXT_MainTitle}
     Cookies             AcceptAll
-    Sleep               2
+    Sleep               ${TIMEOUT_BROWSER2}
 
 Cookies
     [Arguments]         ${type}
@@ -70,38 +70,38 @@ Cookies
     ELSE
         Click           ${SEL_Cookie_Decline}
     END
-    sleep               1
+    sleep               ${TIMEOUT_BROWSER2}
 
 Login
     [Arguments]         ${username}                             ${password}
     Click               ${SEL_HeaderLogin}
     Type Text           ${SEL_LoginFormEmail}         ${username}
     Type Text           ${SEL_LoginFormPwd}      ${password}
-    Click               data-test=btnSignIn
-    Sleep               2
+    Click               ${SEL_BtnSignIn}
+    Sleep               ${TIMEOUT_BROWSER2}
 
 Logout
    Go To               ${URl}
-   Click               id=headerUser
+   Click               ${SEL_HEaderUser}
    Click               ${SEL_UserBoxLogoutBtn}
    Click               ${SEL_HeaderLogin}
-   ${Text}=            Get Text                                data-test=btnSignIn
+   ${Text}=            Get Text                                ${SEL_BtnSignIn}
    Should Be Equal     ${Text}                                 Přihlásit se
 
 Overeni chybove hlasky
-    ${Text2}           Get Text                                data-test=notification-content
+    ${Text2}           Get Text                                ${GET_NotContent}
     Should Be Equal    ${Text2}                                ${ERROR_TEXT_IncorrectEmailOrPwd}
 
 Overeni chybove hlasky na email
-    ${Text3}           Get Text                                data-test=user-login-form-email-message
+    ${Text3}           Get Text                                ${GET_MessEmail}
     Should Be Equal    ${Text3}                                ${ERROR_TEXT_FillCorrectEmail}
 
 Pridat do kosiku
     [Arguments]         ${Zbozi}
     Type Text           ${SEL_SearchGlobal}          ${Zbozi}
-    Sleep               5
+    Sleep               ${TIMEOUT_BROWSER}
     Click               "Hledat"
-    Sleep               5
+    Sleep               ${TIMEOUT_BROWSER}
     Click               css=[${SEL_BtnAdd}] >> nth=1
     Click               ${SEL_CartContent}
     Click               ${SEL_Cart}
@@ -109,6 +109,6 @@ Pridat do kosiku
 Odebrani z kosiku
     Click              ${SEL_CartContent}
     Click              css=${SEL_CssForRemove} >> [${SEL_BtnMinus}]
-    Sleep              2
+    Sleep              ${TIMEOUT_BROWSER2}
     ${Text4}           Get Text                     ${SEL_CartReview}
     Should Be Equal    ${Text4}                     ${ERROR_TEXT_EmptyCart}
