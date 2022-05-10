@@ -1,5 +1,6 @@
 *** Settings ***
-Library  Browser
+Library         Browser
+Resource        TestData.robot
 
 *** Variables ***
 
