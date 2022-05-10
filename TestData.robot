@@ -16,7 +16,7 @@ ${ZBOZI01_NAME}             mouka
 ${ZBOZI01_ID}               1316775
 
 #Strings
-${TEXT_MainTitle}                   Online supermarket Rohlik.cz
+${TEXT_MainTitle}                   Online supermarket Rohlik.cz — nejrychlejší doručení ve městě
 ${TEXT_EmptyCart}                   Vysypat košík
 
 #Error strings
@@ -38,15 +38,11 @@ ${SEL_SearchGlobal}         id=searchGlobal
 ${SEL_BtnSearchGlobal}      text=Hledat
 
 #SELEKTORY pro zboží
-${SEL_BtnAdd}               data-test=btnAdd
+
 ${SEL_BtnPlus}              data-test=btnPlus
-#Tohle nebude fungovat, je nutné dělat selektror po částech
-#${SEL_BtnAddId}             css=[data-product-id="${produkt_id}"][data-test="btnAdd"]
-#${SEL_BtnPlusId}            css=.sc-oad7xy-0 [data-product-id="${produkt_id}"][data-test="btnPlus"]
-#Je třeba použít
 ${SEL_ProductID}            data-product-id
 ${SEL_CssForAdding}         .sc-oad7xy-0
-
+${SEL_BtnAdd}               data-test=btnAdd
 ${SEL_BtnMinus}             data-test=btnMinus
 
 #SELEKTORY pro Košík

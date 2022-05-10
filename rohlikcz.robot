@@ -58,16 +58,16 @@ Odebrání zboží z košíku
 Open URL
     New Browser         chromium                                headless=false
     New Page            ${URL}
-    Get Title           ==    Online supermarket Rohlik.cz — nejrychlejší doručení ve městě
+    Get Title           ==    ${TEXT_MainTitle}
     Cookies             AcceptAll
     Sleep               2
 
 Cookies
     [Arguments]         ${type}
     IF  "${type}" == "AcceptAll"
-        Click           id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
+        Click           ${SEL_Cookie_AllowAll}
     ELSE
-        Click           id="CybotCookiebotDialogBodyButtonDecline"
+        Click           ${SEL_Cookie_Decline}
     END
     sleep               1
 
@@ -89,11 +89,11 @@ Logout
 
 Overeni chybove hlasky
     ${Text2}           Get Text                                data-test=notification-content
-    Should Be Equal    ${Text2}                                Zadal(a) jste nesprávný e-mail nebo heslo.
+    Should Be Equal    ${Text2}                                ${ERROR_TEXT_IncorrectEmailOrPwd}
 
 Overeni chybove hlasky na email
     ${Text3}           Get Text                                data-test=user-login-form-email-message
-    Should Be Equal    ${Text3}                                Zadejte platný email
+    Should Be Equal    ${Text3}                                ${ERROR_TEXT_FillCorrectEmail}
 
 Pridat do kosiku
     [Arguments]         ${Zbozi}
@@ -101,13 +101,13 @@ Pridat do kosiku
     Sleep               5
     Click               "Hledat"
     Sleep               5
-    Click               css=[data-test=btnAdd] >> nth=1
+    Click               css=[${SEL_BtnAdd}] >> nth=1
     Click               data-test=headerPrice
-    Click               id=cart
+    Click               ${SEL_Cart}
 
 Odebrani z kosiku
     Click              data-test=headerPrice
-    Click              css=.sc-14bk3kj-0 >> [data-test="btnMinus"]
+    Click              css=.sc-14bk3kj-0 >> [${SEL_BtnMinus}]
     Sleep              2
     ${Text4}           Get Text                     id=cartReviewMainTitle
-    Should Be Equal    ${Text4}                     Košík funguje i jako nákupní seznam
+    Should Be Equal    ${Text4}                     ${ERROR_TEXT_EmptyCart}
