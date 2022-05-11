@@ -50,7 +50,7 @@ Přidání zboží do košíku
 Odebrání zboží z košíku
     Open URL
     Login               ${USER1_NAME}                  ${USER1_PASSWORD}
-#    Pridat Do Kosiku    ${ZBOZI01_NAME}             - zakomentova řádek, pokud se v košíku už z předchozáho testu objevuje zboží
+#    Pridat Do Kosiku    ${ZBOZI01_NAME}            - zakomentova řádek, pokud se v košíku už z předchozáho testu objevuje zboží
     Odebrani Z Kosiku
     Logout
 
