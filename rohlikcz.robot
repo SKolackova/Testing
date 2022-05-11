@@ -70,7 +70,7 @@ Cookies
     ELSE
         Click           ${SEL_Cookie_Decline}
     END
-    sleep               ${TIMEOUT_BROWSER2}
+    sleep               ${TIME_BETWEEN_CHECKS}
 
 Login
     [Arguments]         ${username}                             ${password}
